@@ -3,11 +3,13 @@ package com.sda.springjavapoz4.config;
 import com.sda.springjavapoz4.service.RandomNumbersGeneratorService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class NumberGeneratorServiceConfiguration {
 
-    @Bean
+    @Profile("dev")
+  //  @Bean
     public RandomNumbersGeneratorService smallNumbersGenerator() {
         return new RandomNumbersGeneratorService(50, 0);
     }
