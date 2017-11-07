@@ -9,11 +9,12 @@ import org.springframework.context.annotation.Profile;
 public class NumberGeneratorServiceConfiguration {
 
     @Profile("dev")
-  //  @Bean
+    @Bean
     public RandomNumbersGeneratorService smallNumbersGenerator() {
         return new RandomNumbersGeneratorService(50, 0);
     }
 
+    @Profile("prod")
     @Bean
     public RandomNumbersGeneratorService bigNumbersGenerator() {
         RandomNumbersGeneratorService randomNumbersGeneratorService = new RandomNumbersGeneratorService();

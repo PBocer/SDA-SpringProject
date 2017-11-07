@@ -7,8 +7,8 @@ public class CalcService {
 
     private String message;
 
-    public CalcService(String message){
-        this.message=message;
+    public CalcService(String message) {
+        this.message = message;
     }
 
     public int sum(int a, int b) {
