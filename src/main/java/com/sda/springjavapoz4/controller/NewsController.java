@@ -1,12 +1,11 @@
 package com.sda.springjavapoz4.controller;
 
+import com.sda.springjavapoz4.model.News;
 import com.sda.springjavapoz4.model.User;
 import com.sda.springjavapoz4.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -29,5 +28,11 @@ public class NewsController {
         ModelAndView modelAndView = new ModelAndView("news");
         modelAndView.addObject("news", newsService.getNews(id));
         return modelAndView;
+    }
+
+    @PostMapping
+    public String saveNews(@ModelAttribute News news){
+        int index= newsService.saveRandomUser(news);
+        return "redirect:/news"+ index;
     }
 }
