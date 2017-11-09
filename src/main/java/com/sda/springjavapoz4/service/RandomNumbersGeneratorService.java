@@ -1,5 +1,4 @@
 package com.sda.springjavapoz4.service;
-
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -45,4 +44,4 @@ public class RandomNumbersGeneratorService implements NumberGenerator {
 //drugi z zakresu 1000-10000
 //Wstrzykujemy je do controllerow, pierwszy do UsersController drugi do HomeController
 //Używamy ich odpowiednio w metodach @GetMapping
-//Używamy Qualifierfier
+//Używamy Qualifier
