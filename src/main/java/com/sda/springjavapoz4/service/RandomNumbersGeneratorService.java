@@ -45,4 +45,4 @@ public class RandomNumbersGeneratorService implements NumberGenerator {
 //drugi z zakresu 1000-10000
 //Wstrzykujemy je do controllerow, pierwszy do UsersController drugi do HomeController
 //Używamy ich odpowiednio w metodach @GetMapping
-//Używamy Qualifier
+//Używamy Qualifierfier

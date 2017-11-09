@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
  * ModelAttribute - do wyciagania danych wyslanych w formularzu (content-type:x-www-form-urlencoded
  * RequestBody - do wyciagania dancyh wyslanych w body (np. content-type: application-json)
  */
-
 @Controller
 @RequestMapping("/users")
 public class UsersController {
@@ -70,8 +69,3 @@ public class UsersController {
     }
 
 }
-
-//1. nowa metoda na sciezke /users
-//2. parametr firstName
-//3. W UsersService piszemy metode getUsersByFirstName -> List<User>
-//4. System.out.println(lista) albo th:each(sprawdzcie na stackoverflow)
